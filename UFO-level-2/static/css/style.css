@@ -66,6 +66,14 @@ body {
   background-color: #44515F;
 }
 
+.btn-navbar {
+  background-color: #4e5d6c;
+  border-color: #ebebeb;
+  border-width: 1px;
+  border-radius: 5px;
+  color: #ebebeb;
+}
+
 .filters .panel-body {
   padding: 0;
 }
