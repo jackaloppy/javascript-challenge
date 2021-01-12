@@ -46,7 +46,7 @@ body {
 /* This CSS styles the ufo icon in the navbar */
 .nav-ufo {
   position: absolute;
-  bottom: 5px;
+  top: 8px;
   left: 150px;
   width: 35px;
   color: white;
@@ -156,6 +156,18 @@ select {
 }
 
 /* media queries which will only be activated at specific screen sizes */
+@media (min-width: 500px) {
+  .navbar-right {
+      float: right !important;
+  }
+  .navbar {
+    border-radius: 0;
+  }
+  .navbar-header {
+    float: left;
+  }
+}
+
 @media (max-width: 800px) {
   #table-area td {
     font-size: 1em;
