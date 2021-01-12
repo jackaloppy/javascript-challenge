@@ -52,9 +52,18 @@ body {
   color: white;
 }
 
+.body-ufo {
+  position: relative;
+  width: 30px;
+  color: white;
+}
 /* Adding styles to the aside and filter form */
 .ufo-form {
   margin-top: 50px;
+}
+
+.btn-default {
+  background-color: #44515F;
 }
 
 .filters .panel-body {
