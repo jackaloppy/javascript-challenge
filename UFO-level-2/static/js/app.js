@@ -9,6 +9,12 @@ function capWords(p1) {
     return p1; 
 };
 
+function dateFormater (p1) {
+    var parser = d3.timeParse("%m/%e/%Y");
+    var dateFormat = d3.timeFormat("%Y-%m-%d");
+    return dateFormat(parser(p1));
+};
+
 var tbody = d3.select("tbody");
 
 function seeAll() {
@@ -45,7 +51,7 @@ function runEnter() {
     d3.event.preventDefault();
     tbody.selectAll("tr").remove();
     var inputValue = d3.select("#datetime").property("value");
-    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
+    var filteredData = tableData.filter(sighting => dateFormater(sighting.datetime) === inputValue);
     filteredData.forEach((sighting) => {
         var row = tbody.append("tr");
         Object.entries(sighting).forEach(([key,value]) => {
